@@ -1,0 +1,86 @@
+@import "_mixins-project-1";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include body-style;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-container {
+  @include header-container;
+
+  &__my-gitHub {
+    @include gh-icon;
+  }
+
+  &__project-name {
+    @include project-name;
+  }
+}
+
+.main-container {
+  @include main-container-style;
+
+  &__project-description {
+    @include project-description;
+  }
+
+  .my-form-box {
+    overflow: auto;
+    padding : 5px;
+    width   : 100%;
+
+    &__form-notification {
+      @include form-notification;
+    }
+
+    .form-register {
+      margin : 0;
+      padding: 5px;
+
+      &__input-description {
+        @include input-description;
+      }
+
+      &__inputs{
+        @include inputs;
+      }
+
+      .fa {
+        @include fa-icon;
+      }
+
+      &__form-buttons-box {
+        @include form-button-box;
+
+        & .form-register__form-buttons {
+          @include form-buttons;
+        }
+
+        & .form-register__form-buttons:hover {
+          background-color: #05222ca2;
+        }
+      }
+
+      & .input-red-notification {
+        background-color: #ff7070dc;
+      }
+    }
+  }
+}
+
+.footer {
+  @include footer;
+
+  &__copyright {
+    @include footer-copyright;
+  }
+}

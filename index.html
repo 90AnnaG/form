@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Anna Grzywa Projects">
+   <meta name="author" content="Anna Grzywa">
+   <link rel="stylesheet" type="text/css" href="css/form.css" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title> Formularz </title>
+</head>
+
+<body>
+   <header class="header-container">
+      <a href="https://github.com/90AnnaG" target="_blank"><img class="header-container__my-gitHub" alt="GitHub"
+            title="Anna Grzywa GitHub" src="images/github_icon.png"></a>
+      <h1 class="header-container__project-name">Formularz</h1>
+   </header>
+
+   <main class="main-container">
+      <h2 class="main-container__project-description">Zarejestruj się</h2>
+
+      <section class="my-form-box">
+         <span class="my-form-box__form-notification"></span>
+         <form class="form-register" name="form" method="POST">
+            <label class="form-register__input-description">Imię:</label>
+            <input type="text" class="form-register__inputs" minlength="2"
+               maxlength="25" autocomplete="off">
+            <label class="form-register__input-description">Nazwisko:</label>
+            <input type="text" class="form-register__inputs" minlength="2"
+               maxlength="25" autocomplete="off">
+            <label class="form-register__input-description">Login:</label>
+            <input type="text" class="form-register__inputs" minlength="3" maxlength="25">
+            <label class="form-register__input-description">Adres e-mail:</label>
+            <input type="email" class="form-register__inputs">
+            <label class="form-register__input-description"> Data urodzenia: </label>
+            <input type="date" name="birthday" class="form-register__inputs" placeholder="dd.mm.rrrr"
+               min="1900-01-01" max="2004-12-31">
+            <label class="form-register__input-description">Hasło: <i class="fa fa-eye" id="toggle-password"></i></label>
+            <input type="password" class="form-register__inputs" id="password" minlength="3" maxlength="25">
+            <label class="form-register__input-description">Powtórz hasło: <i class="fa fa-eye" id="toggle-password2"></i></label>
+            <input type="password" class="form-register__inputs" id="confirm-password" minlength="3"
+               maxlength="25">
+            <div class="form-register__form-buttons-box">
+               <button type="submit" class="form-register__form-buttons" value="Send">Wyślij</button>
+               <button type="reset" class="form-register__form-buttons" value="Reset">Resetuj</button>
+            </div>
+         </form>
+      </section>
+   </main>
+
+   <footer class="footer">
+      <span class="footer__copyright">Design by Anna Grzywa &copy; 2020</span>
+   </footer>
+   <script src="js/app.js"></script>
+</body>
+
+</html>

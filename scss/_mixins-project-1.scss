@@ -1,0 +1,230 @@
+// mixins for project-1_form
+@import "_variables";
+@import "_breakpoints";
+
+@mixin body-style {
+    background-attachment: fixed;
+    background           : $body_background-color;
+    color                : #f2f2f2;
+    font-family          : 'Work Sans', sans-serif;
+    margin               : 0;
+    padding              : 0;
+    width                : 100%;
+}
+
+@mixin header-container {
+    border-bottom   : 1px solid #fff;
+    background-color: $containers_background-color;
+    display         : flex;
+    margin          : 0;
+    overflow        : auto;
+    padding         : 10px 35px 10px 10px;
+    width           : 100%;
+
+    @media (min-width: #{$screen-tablet}) {
+        height       : 70px;
+        padding-right: 60px;
+    }
+}
+
+@mixin gh-icon {
+    height: 30px;
+    margin: 0;
+    width : 30px;
+
+    @media (min-width: #{$screen-tablet}) {
+        height: 45px;
+        width : 45px;
+    }
+}
+
+@mixin project-name {
+    display       : inline-block;
+    font-family   : 'Oswald', sans-serif;
+    font-size     : 25px;
+    letter-spacing: 2px;
+    line-height   : 10px;
+    margin        : 0 auto;
+    padding       : 10px;
+    text-align    : center;
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size     : 35px;
+        letter-spacing: 3px;
+        margin-top    : 10px;
+    }
+}
+
+@mixin main-container-style {
+    margin-top: 5px;
+    overflow  : auto;
+    padding   : 10px;
+}
+
+@mixin project-description {
+    font-family   : 'Oswald', sans-serif;
+    font-size     : 18px;
+    letter-spacing: 2px;
+    margin        : 0;
+    padding       : 0;
+    text-align    : center;
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size     : 25px;
+        letter-spacing: 3px;
+    }
+}
+
+@mixin form-notification {
+    color         : #fff;
+    display       : block;
+    font-size     : 15px;
+    font-weight   : bold;
+    height        : 20px;
+    letter-spacing: 1px;
+    margin        : 5px 0;
+    padding       : 2px;
+    text-align    : center;
+    text-shadow   : 1px 2px #af1414;
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 25px;
+        height   : 35px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        font-size  : 20px;
+        height     : 25px;
+        line-height: 20px;
+        margin     : 0;
+    }
+}
+
+@mixin input-description {
+    display       : block;
+    font-size     : 15px;
+    letter-spacing: 2px;
+    margin        : 5px auto 2px;
+    text-align    : center;
+    width         : 260px;
+    position      : relative;
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 20px;
+        margin   : 8px auto 5px;
+        width    : 340px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        font-size: 15px;
+        margin   : 5px auto 2px;
+    }
+}
+
+@mixin fa-icon {
+    cursor  : pointer;
+    display : inline-block;
+    height  : 15px;
+    margin  : 1px 0;
+    position: absolute;
+    right   : 0;
+    width   : 15px;
+
+    @media (min-width: #{$screen-desktop}) {
+        height: 20px;
+        width : 20px;
+    }
+}
+
+@mixin inputs {
+    border       : none;
+    border-radius: 2px;
+    cursor       : pointer;
+    display      : block;
+    height       : 25px;
+    margin       : auto;
+    padding      : 0 5px;
+    text-align   : center;
+    width        : 270px;
+
+    @media (min-width: #{$screen-tablet}) {
+        height: 30px;
+        width : 350px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        height: 23px;
+    }
+}
+
+@mixin form-button-box {
+    margin    : 10px auto 2px;
+    padding   : 2px;
+    text-align: center;
+    width     : 200px;
+
+    @media (min-width: #{$screen-tablet}) {
+        margin-top: 20px;
+        width     : 400px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        margin-top: 10px;
+    }
+}
+
+@mixin form-buttons {
+    background-color: #1875949d;
+    border          : 1px solid #fff;
+    border-radius   : 2px;
+    color           : #f2f2f2;
+    cursor          : pointer;
+    height          : 30px;
+    margin          : 0 10px;
+    padding         : 2px;
+    width           : 70px;
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 20px;
+        height   : 40px;
+        width    : 100px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        font-size: 15px;
+        height   : 30px;
+        width    : 80px;
+    }
+}
+
+@mixin footer {
+    background-color: $containers_background-color;
+    height          : 15px;
+    margin-top      : 10px;
+    padding-top     : 5px;
+    position        : fixed;
+    bottom          : 0;
+    text-align      : center;
+    width           : 100%;
+
+    @media (min-width: #{$screen-tablet}) {
+        height     : 20px;
+        padding-top: 8px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        height: 22px;
+    }
+}
+
+@mixin footer-copyright {
+    display       : block;
+    font-size     : 8px;
+    letter-spacing: 2px;
+    line-height   : 5px;
+    margin        : auto;
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 12px;
+    }
+}
