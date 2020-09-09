@@ -6,6 +6,7 @@ const confirmPasswordInputField = document.getElementById('confirm-password');
 const togglePassword = document.querySelector('#toggle-password');
 const togglePassword2 = document.querySelector('#toggle-password2');
 
+
 // check if inputs are empty
 form.addEventListener('submit', e => {
     for (i = 0; i < formInputs.length; i++) {
