@@ -42,14 +42,14 @@ form.addEventListener('input', e => {
     }
 });
 
-// show/ hide password
+// show/hide password
 togglePassword.addEventListener('click', function (e) {
     const type = passwordInputField.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInputField.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
 
-// show/ hide confirm password
+// show/hide confirm password
 togglePassword2.addEventListener('click', function (e) {
     const type = confirmPasswordInputField.getAttribute('type') === 'password' ? 'text' : 'password';
     confirmPasswordInputField.setAttribute('type', type);
