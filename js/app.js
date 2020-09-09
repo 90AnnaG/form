@@ -12,7 +12,6 @@ form.addEventListener('submit', e => {
         if (formInputs[i].value === '') {
             formInputs[i].classList.add('input-red-notification');
             formNotification.innerHTML = 'Proszę uzupełnić wymagane pola';
-           // i = formInputs.length + 1;
             e.preventDefault();
             return false;
         } //confirm passwords
@@ -34,7 +33,7 @@ form.addEventListener('reset', e => {
     }
 });
 
-// clear red error and "alert" if string in input is correct
+// clear red error and a notofication if string in input is correct
 form.addEventListener('input', e => {
     for (let input of formInputs) {
         input.classList.remove('input-red-notification');
@@ -55,23 +54,3 @@ togglePassword2.addEventListener('click', function (e) {
     confirmPasswordInputField.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
-
-
-/*
-const onlyLetters = document.querySelectorAll('.onlyLetters');
-// require only letters in two first text inputs
-onlyLetters.onkeypress = function (e) {
-    if (!(/^[\s\p{L}]+$/ui.test(String.fromCharCode(e.keyCode)))) {
-        formNotification.innerHTML = 'To pole wymaga wpisania liter';
-        e.preventDefault();
-        return false;
-    } else {
-        return true;
-    }
-};
-
-// require only letters in Nazwisko input
-const onlyLettersLastName = document.getElementById('user-lastname-input');
-onlyLettersLastName.onkeypress = function (e) {
-    requireLetters('To pole wymaga wpisania liter', onlyLettersLastName, e);
-}; */
