@@ -34,7 +34,7 @@ form.addEventListener('reset', e => {
     }
 });
 
-// clear red error and a notofication if string in input is correct
+// clear red background in input and a notofication if string in input is correct
 form.addEventListener('input', e => {
     for (let input of formInputs) {
         input.classList.remove('input-red-notification');
@@ -42,14 +42,14 @@ form.addEventListener('input', e => {
     }
 });
 
-// show/hide password
+// show and hide password value
 togglePassword.addEventListener('click', function (e) {
     const type = passwordInputField.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInputField.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
 
-// show/hide confirm password
+// show and hide confirm password value
 togglePassword2.addEventListener('click', function (e) {
     const type = confirmPasswordInputField.getAttribute('type') === 'password' ? 'text' : 'password';
     confirmPasswordInputField.setAttribute('type', type);
